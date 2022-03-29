@@ -1,0 +1,25 @@
+section.contact
+	.section 
+		.contact__title.title Контакты
+		.contact__wrapper 
+			.contact__info 
+				h3.contact__info-title Как добраться до нашего главного офиса?
+				p.contact__info-descr От остановки ДК Горняков переходим через дорогу по подземному переходу, видим перед собой огромное белое здание КазПочты. Идем через все здание вдоль бетонного забора. Справа от него — проходная № 2 с КПП (отдельно стоящая будка охраны и шлагбаум). Если вы заблудились, или у вас есть вопросы — звоните или пишите нам. Мы работаем с 10:00 до 19:00 по будням.
+				ul.contact__list
+					li.contact__list-item.contact__list-item--mail
+						a(class="contact__list-link" href="#") info@annabell.com
+					li.contact__list-item.contact__list-item--phone
+						a(class="contact__list-link" href="#") +7 708 436 82 20 
+					li.contact__list-item.contact__list-item--map ул. Алиханова, 37
+			form(class="contact__form" action="#")
+				.contact__form-group
+					input(type="text" class="contact__form-control" placeholder="Имя")
+				.contact__form-group
+					input(type="email" class="contact__form-control" placeholder="E-mail")
+				.contact__form-group
+					input(type="tel" class="contact__form-control" placeholder="+7 777 777 77 77")
+				.contact__form-group
+					textarea(class="contact__form-control contact__form-textarea" placeholder="Здравствуйте! Я насчет круса|")
+				.contact__form-bottom
+					button(class="contact__form-btn btn btn--secondary" href="#") Отправить
+					p.contact__form-privacy Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с нашей #[a.contact__form-link политикой конфиденциальности.]

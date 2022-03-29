@@ -1,0 +1,30 @@
+header.header
+	.section
+		.header__inner
+			a(href="#").header__logo
+				span.header__logo-main annabell
+				span.header__logo-caption Fashion Лаборатория
+				img(src="img/logo.png", alt="").header__img
+				img(src="img/dark-logo.png", alt="").header__img--dark
+			nav.menu
+				.header__switch-language.switch-language
+					button.switch-language__button(type="button") EN
+					button.switch-language__button.switch-language__button--current(type="button") RU
+				ul.menu__list 
+					li.menu__item 
+						a(href="#").menu__link Портфолио
+					li.menu__item 
+						a(href="#").menu__link annabell
+					li.menu__item 
+						a(href="#").menu__link курсы
+					li.menu__item 
+						a(href="#").menu__link контакты
+					li.menu__item 
+						a(href="#").menu__link 
+							svg.menu__icon
+								use(xlink:href="img/sprite.svg#arrow-right")
+							| instagram
+			button.header__toggle(data-click="burger")
+				span.header__line
+				span.header__line
+				span.header__line

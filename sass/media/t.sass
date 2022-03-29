@@ -1,0 +1,117 @@
+.section
+	+w(740px)
+	padding: 0
+
+.title
+	margin-bottom: 45px
+	font-size: 24px
+	line-height: 36px
+
+.header
+	&__switch-language
+		margin-bottom: 0
+		margin-right: 20px
+	&__toggle
+		display: none
+	&.sticky
+		.menu__link
+			color: $primary-color
+		.switch-language__button
+			color: $primary-color
+.menu
+	position: static
+	background-color: transparent
+	width: auto
+	height: auto
+	display: flex
+	align-items: center
+	flex-direction: row
+	opacity: 1
+	visibility: visible
+	&__list
+		display: flex
+		align-items: center
+	&__item
+		text-align: left
+		&:not(:last-child)
+			margin-bottom: 0
+			margin-right: 20px
+
+.hero-slider
+	&__info
+		max-width: 480px
+	&__title
+		font-size: 24px
+		line-height: 32px
+	&__descr
+		margin-bottom: 40px
+		font-size: 18px
+		line-height: 24px
+
+.portfolio
+	padding: 60px 0
+
+.about
+	padding-top: 60px
+	&__descr
+		max-width: 970px
+		margin: 0 auto 50px
+		font-size: 18px
+		line-height: 24px
+
+.features
+	padding: 60px 0
+
+.author
+	padding: 60px 0
+
+.team
+	padding: 60px 0
+
+.contact
+	padding: 60px 0
+
+.courses
+	&__item
+		padding: 50px
+	&__info
+		max-width: 515px
+		&-title
+			font-size: 20px
+			line-height: 28px
+	&__price
+		font-size: 24px
+
+.contact
+	&__wrapper
+		justify-content: space-between
+		display: flex
+	&__info
+		max-width: 400px
+		margin-right: 20px
+		&-title
+			font-size: 18px
+			line-height: 28px
+		&-descr
+			line-height: 24px
+	&__list
+		display: flex
+		flex-wrap: wrap
+		&-item
+			font-size: 18px
+			background-size: 15px
+			&:first-child
+				margin-right: 20px
+
+.footer
+	padding-bottom: 60px
+	&__wrapper
+		padding: 40px
+	&__copyright
+		margin-bottom: 0
+	&__left
+		align-items: center
+		display: flex
+		width: 100%
+	&__logo
+		margin: 0 auto

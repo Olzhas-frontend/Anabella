@@ -1,0 +1,42 @@
+@import "../../../core/mixins/reset"
+@import "../../../core/mixins/mixins"
+@import "../../../core/libs/css/swiper"
+@import "vars"
+$font_body: 14px
++font_inc($f_reg,'PFDinDisplayPro-Regular.woff')
++font_inc($f_bold,'PFDinDisplayPro-Bold.woff')
++font_inc($f_reg_italic,'PFDinDisplayPro-Italic.woff')
++font_inc($habibi_reg,'Habibi-Regular.ttf')
+.set
+	+wh(100%)
+html
+	scroll-behavior: smooth
+html,body
+	min-height: 100vh
+	overflow-x: hidden
+body
+	+wh(100%)
+	+font($font_body,$f_reg,$primary-color)
+
+input,button
+	font-family: inherit
+	font-size: inherit
+
+input
+	background-color: transparent
+	border: none
+
+input[type='checkbox'],input[type='radio']
+	display: none
+
+@import "media/m"
++mq(560px)
+	@import "media/ml"
++mq(768px)
+	@import "media/t"
++mq(1024px)
+	@import "media/tl"
++mq(1200px)
+	@import "media/d"
+//+mq(1440px)
+	@import "media/dl"

@@ -1,0 +1,195 @@
+.section
+	+w(1170px)
+
+.btn
+	&--primary
+		&:hover
+			color: $primary-color
+			background-color: #fff
+			box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.08)
+	&--secondary
+		&:hover
+			color: #fff
+			background-color: $primary-color
+.title
+	margin-bottom: 45px
+	font-size: 36px
+	line-height: 72px
+
+.header
+	padding: 55px 0
+	&__img
+		max-width: none
+	&__switch-language
+		margin-right: 40px
+	&.sticky
+		padding: 30px 0
+		.header__img--dark
+			max-width: none
+		.switch-language__button--current
+			&::after
+				bottom: calc(100% - 70px)
+				background-color: $primary-color
+
+.menu
+	&__item
+		&:not(:last-child)
+			margin-right: 40px
+	&__link
+		transition: .3s ease-in-out
+		&:hover
+			color: $primary-color
+			svg
+				fill: $primary-color
+
+.switch-language
+	&__button
+		position: relative
+		&:first-child
+			margin-right: 40px
+		&::after
+			content: ''
+			position: absolute
+			bottom: calc( 100% - 95px)
+			left: 0
+			width: 0
+			height: 2px
+			background-color: #fff
+			transition: .3s ease-in-out
+		&--current
+			&::after
+				width: 17px
+		&:hover
+			&::after
+				width: 17px
+
+.hero-slider
+	.swiper-slide
+		&:nth-child(1)
+			.hero-slider__img
+				bottom: -90px
+			.hero-slider__title
+				max-width: 550px
+				font-family: $habibi_reg
+	.swiper-button-prev,
+	.swiper-button-next
+		display: flex
+		opacity: 1
+		&::after
+			display: none
+		&:hover
+			svg
+				fill: $primary-color
+		svg
+			width: 25px
+			height: 25px
+			fill: #fff
+			transition: .3s ease-in-out
+	.swiper-button-prev
+		left: 50px
+	.swiper-button-next
+		right: 50px
+	.swiper-pagination
+		width: auto
+		left: 25%
+		bottom: 105px
+	&__item
+		padding-bottom: 95px
+	&__info
+		max-width: 575px
+	&__title
+		font-size: 48px
+		line-height: 54px
+	&__descr
+		margin-bottom: 80px
+	&__img
+		max-width: none
+		bottom: -40px
+
+.portfolio
+	padding: 100px 0 120px
+	&-slider
+		.swiper-pagination-bullet-active
+			width: 18px
+			height: 14px
+	&__navigation
+		margin-top: 50px
+	&__item
+		position: relative
+		width: 100%
+		max-width: 280px
+		min-height: 552px
+		transform-style: preserve-3d
+		overflow: hidden
+		perspective: 300px
+		img
+			height: 100%
+		&:hover
+			.portfolio__item-front
+				transform: rotateY(180deg)
+			.portfolio__item-back
+				transform: rotateY(0)
+				z-index: 3
+		&-front
+			width: 100%
+			height: 100%
+			background: #434343
+			position: absolute
+			z-index: 3
+			transition: all .8s
+			backface-visibility: hidden
+		&-back
+			padding: 120px 40px
+			border: 2px solid $primary-color
+			background-color: #fff
+			z-index: 2
+			opacity: 1
+			visibility: visible
+			transform: rotateY(180deg)
+			transition: all .8s
+			backface-visibility: hidden
+			border-radius: 4px
+		&-title
+			margin-bottom: 20px
+			font-family: $f_bold
+			font-size: 18px
+			line-height: 28px
+			letter-spacing: 1px
+			text-transform: uppercase
+		&-descr
+			margin-bottom: 40px
+			font-size: 18px
+			line-height: 24px
+			color: rgba(51, 51, 51, 0.6)
+		&-link
+			font-family: $f_bold
+			color: inherit
+			text-transform: uppercase
+
+.about
+	padding-top: 0
+
+.features
+	padding: 100px 0 120px
+
+.team
+	padding: 100px 0 80px
+	&__item
+		flex: 0 0 calc(25% - 40px)
+	&__decsr
+		font-size: 18px
+
+.courses
+	&__item
+		padding: 55px 100px
+
+.contact
+	padding: 100px 0 120px
+	&__list
+		&-item
+			&:not(:last-child)
+				margin-bottom: 40px
+.footer
+	padding-bottom: 95px
+	&__wrapper
+		padding: 55px 100px

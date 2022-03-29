@@ -1,0 +1,432 @@
+.section
+	padding: 0 15px
+	margin: 0 auto
+
+.title
+	margin-bottom: 20px
+	font-family: $f_reg
+	font-size: 18px
+	text-transform: uppercase
+	text-align: center
+
+.btn
+	display: inline-block
+	padding: 10px 35px
+	font-family: $f_bold
+	text-transform: uppercase
+	border-radius: 40px
+	transition: .3s ease-in-out
+	&--primary
+		border: 2px solid #fff
+		color: #FFF
+	&--secondary
+		border: 2px solid $primary-color
+		color: $primary-color
+
+.header
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 101
+	padding: 20px 0
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+	transition: .3s ease-in-out
+	&.sticky
+		padding: 15px 0
+		background: rgba(255, 255, 255, 0.8)
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02)
+		backdrop-filter: blur(40px)
+		.header__logo
+			color: $primary-color
+		.menu__link
+			svg
+				fill: $primary-color
+	&__img
+		display: none
+		&--dark
+			display: none
+	&__logo
+		color: #fff
+		text-transform: uppercase
+		&-main
+			font-family: $f_bold
+			font-size: 26px
+			letter-spacing: 6px
+		&-caption
+			display: block
+			font-size: 14px
+			letter-spacing: 1px
+	&__inner
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__toggle
+		position: relative
+		z-index: 101
+		display: inline-block
+		width: 30px
+		height: 30px
+		cursor: pointer
+		border: none
+		background-color: transparent
+		transition: all 0.3s ease-in-out
+		&.is-active
+			.header__line:nth-child(2)
+				transform: translateX(10px)
+			.header__line:nth-child(3)
+				transform: translateX(5px)
+	&__line
+		display: block
+		width: 100%
+		height: 2px
+		margin-bottom: 7px
+		background-color: $primary-color
+		transition: all 0.3s ease-in-out
+		&:nth-child(1)
+			width: 30px
+		&:nth-child(2)
+			width: 20px
+		&:nth-child(3)
+			width: 25px
+	&__switch-language
+		margin-bottom: 20px
+
+.menu
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 100
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	width: 100%
+	height: 100vh
+	opacity: 0
+	visibility: hidden
+	background: #E1D2E1
+	transition: .3s ease-in-out
+	&.active
+		opacity: 1
+		visibility: visible
+	&__item
+		text-align: center
+		&:not(:last-child)
+			margin-bottom: 20px
+	&__link
+		font-family: $f_bold
+		text-transform: uppercase
+		color: #FFF
+	&__icon
+		width: 12px
+		height: 12px
+		fill: #fff
+		margin-right: 10px
+		transition: .3s ease-in-out
+
+.switch-language
+	display: flex
+	align-items: center
+	&__button
+		font-family: $f_bold
+		text-transform: uppercase
+		color: #FFF
+		&:first-child
+			margin-right: 20px
+
+.hero
+	background: linear-gradient(0deg, rgba(51, 51, 51, 0.04), rgba(51, 51, 51, 0.04)), linear-gradient(90deg, #E1D2E1 0%, rgba(216, 199, 230, 0.6) 47.4%, rgba(195, 167, 231, 0.4) 100%)
+	&__wrapper
+		position: relative
+
+.hero-slider
+	width: 100%
+	overflow: hidden
+	&__item
+		padding: 130px 0 80px
+	&__title
+		margin-bottom: 20px
+		font-size: 18px
+		text-transform: uppercase
+		color: #FFF
+	&__descr
+		margin-bottom: 20px
+		font-family: $f_bold
+		color: rgba(255, 255, 255, 0.6)
+	&__img
+		display: none
+	.swiper-button-prev,
+	.swiper-button-next
+		display: none
+	.swiper-pagination
+		bottom: 40px
+		&-bullet
+			width: 10px
+			height: 10px
+			opacity: 1
+			background: rgba(255, 255, 255, 0.2)
+			border-radius: 20px
+			transition: .3s ease-in-out
+			&-active
+				width: 18px
+				height: 14px
+				background-color: #fff
+				box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.18)
+
+.portfolio
+	padding: 30px 0
+	&-slider
+		width: 100%
+		overflow: hidden
+		.swiper-pagination
+			position: static
+			&-bullet
+				width: 10px
+				height: 10px
+				background: rgba(51, 51, 51, 0.2)
+				border-radius: 20px
+				opacity: 1
+				transition: .3s ease-in-out
+				&-active
+					background-color: $primary-color
+		.swiper-button-prev,
+		.swiper-button-next
+			position: static
+			width: 30px
+			height: 30px
+			display: flex
+			margin-top: 0
+			align-items: center
+			flex-shrink: 0
+			justify-content: center
+			border: 2px solid #333333
+			border-radius: 50%
+			&::after
+				display: none
+		.swiper-button-disabled
+			opacity: 0.6
+			border: 2px solid rgba(51, 51, 51, 0.6)
+	&__navigation
+		margin-top: 20px
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__wrapper
+		position: relative
+	&__item
+		position: relative
+		&-back
+			position: absolute
+			top: 0
+			width: 100%
+			height: 100%
+			opacity: 0
+			visibility: hidden
+		&-img
+			display: block
+			width: 100%
+			border-radius: 4px
+
+.about
+	padding-top: 30px
+	background-color: #f9f9f9
+	&__wrapper
+		text-align: center
+	&__descr
+		margin-bottom: 20px
+		color: rgba(51, 51, 51, 0.6)
+
+.features
+	padding: 30px 0
+	&__item
+		display: flex
+		padding: 20px 10px
+		background-color: #FFF
+		border: 2px solid #333333
+		border-radius: 4px
+		margin-bottom: 25px
+		&:last-child
+			margin-bottom: 0
+	&__info
+		&-title
+			margin-bottom: 10px
+			font-family: $f_bold
+			letter-spacing: 1px
+			text-transform: uppercase
+		&-descr
+			color: rgba(51, 51, 51, 0.6)
+	&__icon
+		margin-right: 20px
+		svg
+			width: 32px
+			height: 32px
+			fill: none
+
+.author
+	padding: 30px 0
+	background-color: #F9F9F9
+	&__info
+		margin-bottom: 20px
+	&__founder
+		margin-bottom: 20px
+		font-size: 18px
+		font-family: $f_bold
+		text-transform: uppercase
+	&__quote
+		margin-bottom: 20px
+		font-family: $f_reg_italic
+		color: rgba(51, 51, 51, 0.6)
+		line-height: 24px
+	&__name
+		position: relative
+		padding-left: 20px
+		font-family: $f_bold
+		&::before
+			position: absolute
+			top: 50%
+			left: 0
+			width: 15px
+			height: 2px
+			content: ''
+			transform: translateY(-50%)
+			background-color: $primary-color
+
+.team
+	padding: 30px 0
+	&__item
+		text-align: center
+		&:not(:last-child)
+			margin-bottom: 20px
+	&__img
+		display: block
+		max-width: 180px
+		margin: 0 auto 10px
+	&__name
+		margin-bottom: 10px
+		font-family: $f_bold
+		letter-spacing: 1px
+		text-transform: uppercase
+	&__prof
+		display: inline-block
+		margin-bottom: 10px
+		font-size: 12px
+		letter-spacing: 1px
+		text-transform: uppercase
+		color: rgba(51, 51, 51, 0.6)
+	&__decsr
+		color: rgba(51, 51, 51, 0.6)
+
+.courses
+	&__item
+		padding: 20px
+		background: #FFFFFF
+		border: 2px solid $primary-color
+		border-radius: 4px
+		&:not(:last-child)
+			margin-bottom: 25px
+	&__info
+		&-title
+			margin-bottom: 10px
+			font-size: 16px
+			text-transform: uppercase
+			font-family: $f_bold
+		&-duration
+			margin-bottom: 10px
+			color: rgba(51, 51, 51, 0.6)
+			span
+				font-family: $f_bold
+		&-descr
+			margin-bottom: 20px
+			color: rgba(51, 51, 51, 0.6)
+	&__price
+		margin-bottom: 10px
+		font-family: $f_bold
+		font-size: 16px
+		text-transform: uppercase
+		&-old
+			margin-right: 10px
+			text-decoration-line: line-through
+
+.contact
+	padding: 30px 0
+	&__info
+		margin-bottom: 20px
+		&-title
+			margin-bottom: 20px
+			font-family: $f_bold
+			letter-spacing: 1px
+			text-transform: uppercase
+		&-descr
+			margin-bottom: 20px
+			line-height: 20px
+			color: rgba(51, 51, 51, 0.6)
+	&__list
+		&-item
+			padding-left: 30px
+			background: no-repeat left center/12px
+			font-family: $f_bold
+			line-height: 24px
+			&--mail
+				background-image: url(../img/email.svg)
+			&--phone
+				background-image: url(../img/phone.svg)
+			&--map
+				background-image: url(../img/map-pin.svg)
+	&__form
+		&-group
+			margin-bottom: 25px
+		&-control
+			width: 100%
+			padding: 24px 20px
+			background-color: #FFF
+			box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.08)
+			border-bottom: 2px solid transparent
+			transition: .3s ease-in-out
+			&:focus
+				border-bottom: 2px solid $primary-color
+		&-textarea
+			height: 100px
+			border: 0
+		&-btn
+			margin-bottom: 20px
+		&-privacy
+			font-size: 14px
+			line-height: 24px
+			color: rgba(51, 51, 51, 0.6)
+		&-link
+			color: inherit
+			font-family: $f_bold
+			text-decoration: underline
+
+.footer
+	padding-bottom: 30px
+	&__wrapper
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 20px
+		background-color: $primary-color
+	&__copyright
+		margin-bottom: 10px
+		font-family: $f_bold
+		line-height: 28px
+		text-transform: uppercase
+		color: #FFF
+	&__logo
+		img
+			max-width: 200px
+
+.top-btn
+	display: flex
+	align-items: center
+	justify-content: center
+	border: 2px solid #fff
+	width: 30px
+	height: 30px
+	border-radius: 50%
+	svg
+		width: 12px
+		height: 12px
+		fill: none
+		stroke: #fff

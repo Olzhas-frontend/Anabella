@@ -1,0 +1,114 @@
+.section
+	+w(1000px)
+
+.header
+	&__img
+		display: block
+		max-width: 250px
+	&__logo
+		&-main
+			display: none
+		&-caption
+			display: none
+	&.sticky
+		.header__img
+			display: none
+		.header__img--dark
+			display: block
+			max-width: 250px
+
+.hero-slider
+	&__item
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding-top: 240px
+	&__img
+		position: absolute
+		bottom: -55px
+		right: 0
+		max-width: 50%
+		display: block
+
+.features
+	&__item
+		padding: 60px 45px 85px
+	&__info
+		&-title
+			margin-bottom: 20px
+			font-size: 24px
+			line-height: 28px
+		&-descr
+			font-size: 18px
+			line-height: 24px
+
+.author
+	padding: 10px 0 0
+	&__wrapper
+		display: flex
+	&__info
+		max-width: 675px
+		padding-top: 80px
+	&__quote
+		font-size: 18px
+	&__name
+		font-size: 18px
+
+.team
+	&__item
+		flex: 0 0 calc(25% - 20px)
+		margin-bottom: 0
+	&__name
+		font-size: 18px
+		line-height: 28px
+	&__prof
+		margin-bottom: 20px
+	&__decsr
+		line-height: 24px
+		text-align: left
+
+.courses
+	&__info
+		max-width: 700px
+		width: 100%
+		&-duration
+			margin-bottom: 20px
+			font-size: 18px
+		&-descr
+			font-size: 18px
+			max-width: 515px
+			line-height: 24px
+		&-title
+			max-width: 515px
+			font-size: 24px
+			line-height: 28px
+			margin-bottom: 20px
+		&-descr
+			margin-bottom: 40px
+	&__price
+		font-size: 36px
+
+.contact
+	&__info
+		max-width: 480px
+		&-title
+			margin-bottom: 40px
+		&-descr
+			margin-bottom: 40px
+	&__form
+		max-width: 575px
+		&-group
+			&:nth-child(4)
+				margin-bottom: 50px
+		&-btn
+			margin-bottom: 0
+			margin-right: 20px
+		&-bottom
+			display: flex
+			align-items: center
+
+.footer
+	&__logo
+		img
+			max-width: none
